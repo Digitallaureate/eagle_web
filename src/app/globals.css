@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-phone-number-input/style.css";
 
 :root {
   --background: #ffffff;
@@ -10,6 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +25,57 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-280px * 5 - 1rem * 5));
+  }
+}
+
+.hero-marquee {
+  width: max-content;
+  animation: hero-marquee 26s linear infinite;
+}
+
+.contact-phone-input {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-phone-input .PhoneInputCountry {
+  margin-right: 0;
+}
+
+.contact-phone-input .PhoneInputCountrySelect {
+  background: transparent;
+  color: #193c54;
+  outline: none;
+}
+
+.contact-phone-input .PhoneInputCountryIcon {
+  width: 1.25rem;
+  height: 1rem;
+  box-shadow: none;
+}
+
+.contact-phone-input .PhoneInputCountrySelectArrow {
+  margin-left: 0.4rem;
+  color: #6c7a96;
+  opacity: 1;
+}
+
+.contact-phone-input .PhoneInputInput {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }

@@ -1,0 +1,16 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="1440" rx="48" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.18" stroke-width="4"/>
+  <path d="M280 940C280 770 418 632 588 632H612C782 632 920 770 920 940V980H280V940Z" fill="white" fill-opacity="0.92"/>
+  <path d="M390 632L490 470H710L810 632" stroke="white" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="440" cy="980" r="60" fill="#0F172A"/>
+  <circle cx="760" cy="980" r="60" fill="#0F172A"/>
+  <text x="110" y="1320" fill="white" font-size="88" font-family="Arial, Helvetica, sans-serif" font-weight="700">Field Deployment</text>
+  <text x="110" y="1410" fill="white" fill-opacity="0.85" font-size="42" font-family="Arial, Helvetica, sans-serif">Rapid launch and recovery workflow</text>
+  <defs>
+    <linearGradient id="bg" x1="155" y1="125" x2="1060" y2="1498" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C2D12"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+</svg>

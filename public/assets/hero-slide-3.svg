@@ -1,0 +1,17 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="1440" rx="48" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.18" stroke-width="4"/>
+  <rect x="220" y="460" width="760" height="520" rx="36" fill="white" fill-opacity="0.9"/>
+  <path d="M320 820L470 690L610 770L760 590L880 700" stroke="#BA6830" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="690" r="28" fill="#0F172A"/>
+  <circle cx="610" cy="770" r="28" fill="#0F172A"/>
+  <circle cx="760" cy="590" r="28" fill="#0F172A"/>
+  <text x="110" y="1320" fill="white" font-size="88" font-family="Arial, Helvetica, sans-serif" font-weight="700">Mission Control</text>
+  <text x="110" y="1410" fill="white" fill-opacity="0.85" font-size="42" font-family="Arial, Helvetica, sans-serif">Telemetry, mapping, and live ops</text>
+  <defs>
+    <linearGradient id="bg" x1="101" y1="84" x2="1093" y2="1498" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#134E4A"/>
+      <stop offset="1" stop-color="#BA6830"/>
+    </linearGradient>
+  </defs>
+</svg>
