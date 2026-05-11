@@ -19,7 +19,7 @@ export const footerContent = {
     logoSrc: "/assets/logo_new.png",
     logoAlt: "Eagle AI Aerospace",
     description:
-      "EAGLE AI AEROSPACE (OPC) is focused on developing innovative drone solutions across agriculture, industrial, commercial, education, and tactical applications. Our vision is to support technology-driven growth through advanced aerial systems, skill development, and future-ready innovation.",
+      "EAGLE AI AEROSPACE (OPS) develops advanced drone solutions for agriculture, industrial, commercial, education, and tactical applications — driving innovation through smart aerial systems, skill development, and future-ready technology.",
   },
   socialLinks: [
     { label: "Facebook", href: "#", icon: "facebook" },

@@ -35,24 +35,10 @@ import {
 
 const slides = [
   {
-    image: "/assets/slider/global_freight.jpg",
+    image: "/assets/Home/home_banner1.png",
     title: "Global Freight",
-  },
-  {
-    image: "/assets/slider/courier_services.jpg",
-    title: "Courier Services",
-  },
-  {
-    image: "/assets/slider/domestics_logistics.jpg",
-    title: "Domestic Logistics",
-  },
-  {
-    image: "/assets/slider/special_service.jpg",
-    title: "Specialized Solutions",
-  },
-  {
-    image: "/assets/slider/value_added_services.jpg",
-    title: "Value Added Services",
+    video:
+      "https://firebasestorage.googleapis.com/v0/b/kabir-assistant-api.firebasestorage.app/o/video%2Fvideo1.mp4?alt=media&token=3e7dc816-a56a-46de-bd8d-3c0a75fa5afd",
   },
 ];
 
@@ -65,12 +51,12 @@ const stats = [
 
 const aboutGallery = {
   left: [
-    { src: "/assets/slider/domestics_logistics.jpg", alt: "Drone flying over agricultural land" },
-    { src: "/assets/slider/special_service.jpg", alt: "Drone operating in a rugged outdoor environment" },
+    { src: "/assets/Home/subsection1.png", alt: "Drone flying over agricultural land" },
+    { src: "/assets/Home/subsection3.png", alt: "Drone operating in a rugged outdoor environment" },
   ],
   right: [
-    { src: "/assets/slider/global_freight.jpg", alt: "Field operator monitoring a drone mission" },
-    { src: "/assets/slider/courier_services.jpg", alt: "Drone use in practical ground operations" },
+    { src: "/assets/Home/subsection2.png", alt: "Field operator monitoring a drone mission" },
+    { src: "/assets/Home/subsection4.png", alt: "Drone use in practical ground operations" },
   ],
 };
 
@@ -80,7 +66,7 @@ const productShowcase = [
     label: "Commercial & Consumer Drones",
     title: "Commercial & Consumer Drones",
     href: "/products/commercial-consumer-drones",
-    image: "/assets/slider/domestics_logistics.jpg",
+    image: "/assets/Home/commercial_section.png",
     description:
       "EAGLE AI AEROSPACE (OPC) is working toward developing drone solutions for businesses, professionals, creators, and everyday users. From aerial photography and surveying to recreational and commercial applications, our goal is to deliver reliable, easy-to-use, and future-ready drone technology for a wide range of users.",
     points: [
@@ -95,7 +81,7 @@ const productShowcase = [
     label: "Agriculture",
     title: "Agriculture",
     href: "/products/agriculture",
-    image: "/assets/slider/global_freight.jpg",
+    image: "/assets/Home/agriculture_section.png",
     description:
       "EAGLE AI AEROSPACE (OPC) is focused on developing drone solutions for modern agriculture, including crop spraying, aerial monitoring, and field mapping applications. Our vision is to make advanced agri-technology more accessible, helping farmers improve productivity, optimize resources, and adopt efficient farming practices across Bharat.",
     points: [
@@ -110,7 +96,7 @@ const productShowcase = [
     label: "Industrial",
     title: "Industrial",
     href: "/products/industrial",
-    image: "/assets/slider/courier_services.jpg",
+    image: "/assets/Home/industrial_section.png",
     description:
       "EAGLE AI AEROSPACE (OPC) is focused on developing industrial drone solutions for engineering, infrastructure, construction, and utility operations. Our planned systems are intended to support site inspections, drainage monitoring, surveying, and infrastructure assessment while improving efficiency, safety, and operational visibility.",
     points: [
@@ -125,7 +111,7 @@ const productShowcase = [
     label: "Defence/ Tactical UAV Solutions",
     title: "Defence/ Tactical UAV Solutions",
     href: "/products/defence-tactical-uav-solutions",
-    image: "/assets/slider/special_service.jpg",
+    image: "/assets/Home/defence_tactical_section.png",
     description:
       "EAGLE AI AEROSPACE (OPC) is working toward the development of next-generation tactical UAV systems for defense and security applications. Our vision includes aerial platforms for border monitoring, reconnaissance, tactical surveillance, and mission-support operations, with a focus on innovation, reliability, and operational adaptability.",
     points: [
@@ -176,83 +162,48 @@ export default function Home() {
 
   return (
     <main className="bg-gray-100 text-gray-900">
-
       {/* Hero Slider */}
-      <div className="relative w-full" style={{ height: "580px" }}>
-        <section className="relative h-full w-full overflow-hidden">
-          {/* Slides */}
-          {slides.map((slide, i) => (
-            <div
-              key={i}
-              className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"
-                }`}
-            >
+      <section className="relative h-[420px] w-full overflow-hidden md:h-[720px]">
+        {slides.map((slide, i) => (
+          <div
+            key={slide.image}
+            className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            {slide.video ? (
+              <video
+                className="h-full w-full object-cover object-center"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={slide.image}
+              >
+                <source src={slide.video} type="video/mp4" />
+              </video>
+            ) : (
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover object-center"
                 priority={i === 0}
                 sizes="100vw"
+                className="object-cover object-center"
               />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-          ))}
+            )}
 
-          {/* Slide title */}
-          <div className="absolute inset-0 flex items-center px-12">
-            <h1 className="text-4xl font-bold text-white drop-shadow-md md:text-5xl">
-              {slides[current].title}
-            </h1>
+            <div className="absolute inset-0 bg-black/30" />
           </div>
+        ))}
 
-          {/* Prev / Next */}
-          <button
-            onClick={prev}
-            aria-label="Previous slide"
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white transition hover:bg-black/60"
-          >
-            <ChevronLeft size={26} />
-          </button>
-          <button
-            onClick={next}
-            aria-label="Next slide"
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white transition hover:bg-black/60"
-          >
-            <ChevronRight size={26} />
-          </button>
+        {/* <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 text-white">
+          <h1 className="text-4xl font-bold drop-shadow-md md:text-5xl">
+            {slides[current].title}
+          </h1>
+        </div> */}
+      </section>
 
-        </section>
-
-        {/* Feature pills — overlapping bottom, outside overflow-hidden */}
-        <div className="absolute bottom-0 left-1/2 w-full max-w-7xl -translate-x-1/2 translate-y-1/2 px-4 sm:px-6 lg:px-8">
-          {/* <div className="grid grid-cols-1 gap-6 rounded-[1.7rem] bg-white px-8 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.18)] sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:gap-8 lg:px-8">
-            {stats.map((stat) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={stat.label}
-                  className="flex items-center gap-4"
-                >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#1489c9]/10 text-[#1489c9]">
-                    <Icon size={28} strokeWidth={2.1} />
-                  </div>
-                  <div>
-                    <p className="text-4xl font-extrabold leading-none text-[#183b5b]">
-                      {stat.value}
-                    </p>
-                    <p className="mt-2 text-base text-slate-500">
-                      {stat.label}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
-        </div>
-      </div>
-
-      {/* Spacer for floating stats bar */}
       <div className="h-28 sm:h-24" />
 
       {/* About section */}
@@ -336,13 +287,12 @@ export default function Home() {
           </div>
 
           <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl shadow-lg">
+            <div className="relative h-[500px] overflow-hidden rounded-2xl shadow-lg">
               <Image
                 src={activeProduct.image}
                 alt={activeProduct.title}
-                width={900}
-                height={500}
-                className="h-[500px] w-full rounded-2xl object-cover shadow-md"
+                fill
+                className="rounded-2xl object-cover shadow-md"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
@@ -418,7 +368,7 @@ export default function Home() {
               className="group relative block overflow-hidden rounded-[1.6rem] shadow-lg"
             >
               <Image
-                src="/assets/slider/Air_Freight_Slider.png"
+                src="/assets/Home/production_section.png"
                 alt="Production unit facility"
                 width={1200}
                 height={900}
@@ -467,7 +417,7 @@ export default function Home() {
               className="group relative block overflow-hidden rounded-[1.6rem] shadow-lg"
             >
               <Image
-                src="/assets/slider/Air_Freight_Slider.png"
+                src="/assets/Home/education_section.png"
                 alt="Production unit facility"
                 width={1200}
                 height={900}

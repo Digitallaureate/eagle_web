@@ -1,53 +1,80 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Eye, Flag } from "lucide-react";
 
+const aboutTopSlide1 = [
+  {
+    image: "/assets/about_us/about_us1.png",
+    title: "",
+    position: "object-[center_22%]",
+  },
+  {
+    image: "/assets/about_us/about_us2.png",
+    title: "",
+    position: "object-center",
+  },
+];
+
 export default function AboutUsPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % aboutTopSlide1.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main className="bg-white text-[#193C54]">
-      <section className="relative min-h-[460px] overflow-hidden">
-        <Image
-          src="/assets/slider/domestics_logistics.jpg"
-          alt="About Eagle AI Aerospace (OBC)"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+      <section className="relative h-[420px] w-full overflow-hidden md:h-[820px]">
+        {aboutTopSlide1.map((slide, index) => (
+          <div
+            key={slide.image}
+            className={`absolute inset-0 transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            <Image
+              src={slide.image}
+              alt="About Eagle AI Aerospace (OPC)"
+              fill
+              priority={index === 0}
+              className={`object-cover ${slide.position || "object-[center_25%]"}`}
+              sizes="100vw"
+            />
+          </div>
+        ))}
+
         <div className="absolute inset-0 bg-[#07111C]/62" />
 
-        <div className="relative mx-auto flex min-h-[460px] max-w-7xl flex-col justify-center px-6 pb-14 pt-32 text-white">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/75">
+        <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 pb-14 pt-32 text-white">
+          <h1 className="text-4xl font-bold drop-shadow-md md:text-5xl">
             About Us
-          </p>
-          {/* <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-            Building the future of indigenous drone innovation.
-          </h1> */}
-          {/* <p className="mt-6 max-w-3xl text-base leading-8 text-white/85 sm:text-lg">
-            We are shaping a future-ready UAV ecosystem through engineering excellence,
-            operational capability, and innovation-led growth.
-          </p> */}
+          </h1>
         </div>
       </section>
 
       <section className="px-4 py-16 sm:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[2rem] bg-[#f8fbfd] p-8 shadow-sm sm:p-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#6B7280]">
-              Company Note
-            </p>
+
             <h2 className="mt-4 text-3xl font-semibold text-[#123A56] sm:text-4xl">
               EAGLE AI AEROSPACE (OPC)
             </h2>
 
             <div className="mt-6 space-y-5 text-base leading-8 text-[#334155] sm:text-lg">
               <p>
-                At Eagle AI Aerospace (OBC), we are building the future of intelligent aviation.
+                At Eagle AI Aerospace (OPC), we are building the future of intelligent aviation.
               </p>
               <p>
-                Founded with a vision to revolutionize aerial operations, we harness the power of artificial intelligence and advanced drone technologies to create smarter, faster, and more efficient solutions for modern industries. Our offerings span across surveillance, mapping, inspection, and autonomous operations, empowering businesses with real-time insights and operational excellence.
+                Founded with a vision to revolutionize aerial operations, we harness the power of artificial intelligence and advanced drone technologies to create smarter, faster, and more efficient solutions for modern industries.
+                Our offerings span across surveillance, mapping, inspection, and autonomous operations, empowering businesses with real-time insights and operational excellence.
               </p>
               <p>
-                We believe that the sky is not the limit—it is the starting point. With a strong commitment to innovation, safety, and reliability, Eagle AI Aerospace (OBC) is positioned to become a trusted partner in the evolving aerospace and AI-driven ecosystem.
+                We believe that the sky is not the limit—it is the starting point. With a strong commitment to innovation, safety, and reliability, Eagle AI Aerospace is positioned to become a trusted partner in the evolving aerospace and AI-driven ecosystem.
               </p>
             </div>
           </div>

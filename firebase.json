@@ -1,0 +1,15 @@
+{
+  "apphosting": {
+    "backendId": "eagle-web",
+    "rootDir": ".",
+    "ignore": [
+      "node_modules",
+      ".git",
+      ".next",
+      "public/assets/video",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions"
+    ]
+  }
+}

@@ -12,36 +12,49 @@ import {
 
 const productionSlides = [
   {
-    image: "/assets/slider/Air_Freight_Slider.png",
+    image: "/assets/production_unit/production_unit_banner1.png",
     title: "Advanced UAV Manufacturing Facility",
   },
   {
-    image: "/assets/slider/Logistics_Consulting_Slider.png",
+    image: "/assets/production_unit/production_unit_banner2.png",
     title: "Drone Innovation & Production Center",
   },
   {
-    image: "/assets/slider/Warehousing_distribution_Slider.png",
+    image: "/assets/production_unit/production_image_banner3.png",
     title: "Next-Generation Manufacturing Hub",
   },
   {
-    image: "/assets/slider/Warehousing_distribution_Slider.png",
+    image: "/assets/production_unit/production_unit_banner4.png",
     title: "Engineering & Production Center",
   },
-  {
-    image: "/assets/slider/Warehousing_distribution_Slider.png",
-    title: "UAV Development & Assembly Facility",
-  }
 ];
+
+const productionSlide = []
 
 const productionDescription =
   "Engineering the future of UAV innovation through structured manufacturing, integrated development, and scalable production capabilities.";
 
 const facilityLabels = [
-  "Advanced UAV Manufacturing Facility",
-  "Drone Innovation & Production Center",
-  "Next-Generation Manufacturing Hub",
-  "Engineering & Production Center",
-  "UAV Development & Assembly Facility",
+  {
+    image: "/assets/production_unit/advance_uav.png",
+    title: "Advanced UAV Manufacturing Facility",
+  },
+  {
+    image: "/assets/production_unit/drone_inovation.png",
+    title: "Drone Innovation & Production Center",
+  },
+  {
+    image: "/assets/production_unit/next_gen.png",
+    title: "Next-Generation Manufacturing Hub",
+  },
+  {
+    image: "/assets/production_unit/enginnering_production.png",
+    title: "Engineering & Production Center",
+  },
+  {
+    image: "/assets/production_unit/uav_development_facilities.png",
+    title: "UAV Development & Assembly Facility",
+  },
 ];
 
 const highlightPoints = [
@@ -98,7 +111,7 @@ export default function ProductionUnitPage() {
 
   return (
     <main className="bg-white text-[#193C54]">
-      <section className="relative min-h-[620px] overflow-hidden">
+      <section className="relative h-[420px] w-full overflow-hidden md:h-[820px]">
         {productionSlides.map((slide, index) => (
           <div
             key={slide.title}
@@ -139,7 +152,7 @@ export default function ProductionUnitPage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {productionSlides.map((slide) => (
+            {facilityLabels.map((slide) => (
               <div
                 key={slide.title}
                 className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
@@ -163,27 +176,8 @@ export default function ProductionUnitPage() {
             ))}
           </div>
 
-          {/* <div className="mt-10 flex flex-wrap gap-3">
-            {facilityLabels.map((label) => (
-              <span
-                key={label}
-                className="rounded-full border border-[#123A56]/15 bg-[#f4f8fb] px-4 py-2 text-sm text-[#193C54]"
-              >
-                {label}
-              </span>
-            ))}
-          </div> */}
         </div>
       </section>
-      {/* <p>
-        EAGLE AI AEROSPACE (OPC) aims to build a future-ready production and development ecosystem dedicated to next-generation drone technologies and unmanned aerial systems. Focused on engineering excellence, innovation, and scalable manufacturing, our planned facility is envisioned to support the complete lifecycle of drone development — from research, design, and prototyping to assembly, testing, and operational advancement.
-        Our vision is to create an environment that encourages technological innovation, practical engineering, and continuous product improvement while addressing the evolving needs of agriculture, industrial operations, commercial applications, education, and strategic sectors. Through structured development processes and quality-focused operations, we aim to establish a strong foundation for reliable and efficient aerial solutions.
-        The proposed facility is also intended to support skill development, technical learning, and collaborative innovation by bringing together engineering, manufacturing, and operational expertise under one ecosystem. By integrating modern production practices with future-oriented technology development, we aspire to contribute meaningfully to India’s growing drone and aerospace industry.
-        With a long-term commitment to innovation, operational quality, and indigenous capability development, EAGLE AI AEROSPACE (OPC) seeks to play a role in strengthening India’s position in the rapidly evolving global UAV ecosystem through responsible growth, engineering excellence, and next-generation manufacturing capabilities.
-      </p> */}
-
-
-
       <section className="mb-10 w-full bg-gradient-to-br from-[#f8fbfd] via-white to-[#eef5f9] px-4 py-16 sm:mb-14 sm:px-8 lg:mb-16 lg:py-20">
         <div className="mx-auto max-w-7xl p-2 sm:p-4 lg:p-6">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
@@ -223,31 +217,40 @@ export default function ProductionUnitPage() {
                 </p>
               </div>
             </div>
-
             <div className="group relative min-h-[200px] overflow-hidden rounded-[1rem] sm:min-h-[360px] lg:min-h-[400px]">
+
+              {/* Mobile Image */}
               <Image
-                src={activeSlide.image}
-                alt={activeSlide.title}
+                src="/assets/production_unit/engineering_future_uav_innovation.png"
+                alt=""
+                fill
+                className="object-cover object-top transition duration-700 group-hover:scale-105 md:hidden"
+                sizes="100vw"
+              />
+
+              {/* Desktop Image */}
+              <Image
+                src="/assets/production_unit/enginnering_land.png"
+                alt=""
+                fill
+                className="hidden object-cover object-center transition duration-700 group-hover:scale-105 md:block"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#07111C]/75 via-[#07111C]/20 to-transparent" />
+            </div>
+
+            {/* <div className="group relative min-h-[200px] overflow-hidden rounded-[1rem] sm:min-h-[360px] lg:min-h-[400px]">
+              <Image
+                src='/assets/production_unit/engineering_future_uav_innovation.png'
+                alt=''
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes="(min-width: 1024px) 40vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07111C]/75 via-[#07111C]/20 to-transparent" />
-              {/* <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/90">
-                  Advanced Manufacturing
-                </p>
-              </div> */}
-              {/* <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
-                  Production Unit
-                </p>
-                <h3 className="font-poppins mt-3 max-w-sm text-2xl font-semibold leading-snug sm:text-3xl">
-                  {activeSlide.title}
-                </h3>
-                <div className="mt-5 h-px w-24 bg-white/40" />
-              </div> */}
-            </div>
+
+            </div> */}
           </div>
         </div>
       </section>

@@ -82,22 +82,46 @@ export default function Header() {
                 }
                 onMouseLeave={() => setOpenDesktopGroup(null)}
               >
-                <Link
-                  href={navItem.href}
-                  onClick={() => setOpenDesktopGroup(null)}
-                  className="flex items-center gap-1 text-[0.95rem] font-semibold text-white transition-colors hover:text-white/80"
-                >
-                  <span>{navItem.label}</span>
+                {navItem.children?.length ? (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenDesktopGroup((current) =>
+                        current === navItem.label ? null : navItem.label
+                      )
+                    }
+                    aria-expanded={openDesktopGroup === navItem.label}
+                    className="flex items-center gap-1 text-[0.95rem] font-semibold text-white transition-colors hover:text-white/80"
+                  >
+                    <span>{navItem.label}</span>
 
-                  {navItem.hasChevron ? (
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform ${
-                        openDesktopGroup === navItem.label ? 'rotate-180' : ''
-                      }`}
-                      strokeWidth={2}
-                    />
-                  ) : null}
-                </Link>
+                    {navItem.hasChevron ? (
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          openDesktopGroup === navItem.label ? 'rotate-180' : ''
+                        }`}
+                        strokeWidth={2}
+                      />
+                    ) : null}
+                  </button>
+                ) : (
+                  <Link
+                    href={navItem.href}
+                    onClick={() => setOpenDesktopGroup(null)}
+                    className="flex items-center gap-1 text-[0.95rem] font-semibold text-white transition-colors hover:text-white/80"
+                  >
+                    <span>{navItem.label}</span>
+
+                    {navItem.hasChevron ? (
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          openDesktopGroup === navItem.label ? 'rotate-180' : ''
+                        }`}
+                        strokeWidth={2}
+                      />
+                    ) : null}
+                  </Link>
+                )}
 
                 {navItem.children?.length ? (
                   <div
@@ -153,13 +177,28 @@ export default function Header() {
             {navItems.map((navItem) => (
               <div key={navItem.label}>
                 <div className="flex items-center justify-between">
-                  <Link
-                    href={navItem.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-base font-semibold text-white"
-                  >
-                    {navItem.label}
-                  </Link>
+                  {navItem.children?.length ? (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenMobileGroup((current) =>
+                          current === navItem.label ? null : navItem.label
+                        )
+                      }
+                      aria-expanded={openMobileGroup === navItem.label}
+                      className="text-base font-semibold text-white"
+                    >
+                      {navItem.label}
+                    </button>
+                  ) : (
+                    <Link
+                      href={navItem.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-base font-semibold text-white"
+                    >
+                      {navItem.label}
+                    </Link>
+                  )}
 
                   {navItem.children?.length ? (
                     <button

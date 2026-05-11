@@ -8,7 +8,7 @@ export type HeaderNavItem = {
 export const headerContent = {
   brand: {
     logoSrc: "/assets/logo_new.png",
-    logoAlt: "AVPL International logo",
+    logoAlt: "International logo",
   },
   navItems: [
     { label: "About Us", href: "/about-us" },
@@ -26,13 +26,6 @@ export const headerContent = {
     {
       label: "Resources",
       href: "/resources",
-      hasChevron: true,
-      children: [
-        { label: "Media Coverage", href: "/resources/media-coverage" },
-        { label: "Press Release", href: "/resources/press-release" },
-        { label: "Gallery", href: "/resources/gallery" },
-        { label: "Blog", href: "/resources/blog" },
-      ],
     },
     { label: "Production Unit", href: "/production-unit" },
     { label: "Education & Training", href: "/investor" },

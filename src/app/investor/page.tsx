@@ -6,17 +6,13 @@ import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const educationSlides = [
   {
-    image: "/assets/slider/courier_services.jpg",
+    image: "/assets/Education/Cover.png",
     title: "Education & Training",
   },
   {
-    image: "/assets/slider/domestics_logistics.jpg",
+    image: "/assets/Education/Cover2.png",
     title: "Building Skills for the Future of Drone Technology",
-  },
-  {
-    image: "/assets/slider/Logistics_Consulting_Slider.png",
-    title: "Practical Learning for the UAV Ecosystem",
-  },
+  }
 ];
 
 const programLabels = [
@@ -38,25 +34,25 @@ const trainingHighlights = [
 
 const learningBlocks = [
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection1.png",
     title: "Drone Pilot Training",
     description:
       "Practical drone flight training focused on operational handling, safety awareness, and real-world flying experience.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection2.png",
     title: "UAV Technology Learning",
     description:
       "Introduction to drone systems, aerial technology, components, and emerging industry applications.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection3.png",
     title: "Technical Skill Development",
     description:
       "Hands-on exposure to drone assembly, maintenance basics, troubleshooting, and operational understanding.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection4.png",
     title: "Industry-Oriented Learning",
     description:
       "Training programs designed to help students understand the practical applications of drones across agriculture, industrial operations, mapping, surveillance, and commercial sectors.",
@@ -65,25 +61,25 @@ const learningBlocks = [
 
 const practicalLearningBlocks = [
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection5.png",
     title: "Hands-On Technical Learning",
     description:
       "Students are envisioned to gain practical exposure to drone systems, operations, assembly processes, and real-world technical workflows.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection6.png",
     title: "Testing & Operational Participation",
     description:
       "As testing forms an important part of drone development, students may also get opportunities to observe and participate in supervised testing and evaluation activities.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection7.png",
     title: "Residential Learning Environment",
     description:
       "Planned hostel facilities aim to support students from different regions and create a focused environment for technical learning and development.",
   },
   {
-    imageUrl: "/assets/slider/courier_services.jpg",
+    imageUrl: "/assets/Education/subsection1.png",
     title: "Building Future UAV Talent",
     description:
       "The initiative is designed to encourage technical growth, innovation, and industry awareness for the next generation of drone professionals.",
@@ -117,7 +113,7 @@ export default function InvestorPage() {
 
   return (
     <main className="bg-white text-[#193C54]">
-      <section className="relative min-h-[620px] overflow-hidden">
+      <section className="relative h-[420px] w-full overflow-hidden md:h-[820px]">
         {educationSlides.map((slide, index) => (
           <div
             key={slide.title}
@@ -143,51 +139,6 @@ export default function InvestorPage() {
           </h1>
         </div>
       </section>
-      {/* <section className="mb-10 w-full bg-gradient-to-br from-[#f8fbfd] via-white to-[#eef5f9] px-4 py-16 sm:mb-14 sm:px-8 lg:mb-16 lg:py-20">
-        <div className="mx-auto max-w-7xl p-2 sm:p-4 lg:p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#6B7280]">
-            Education & Training
-          </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-[#123A56] sm:text-5xl lg:text-6xl">
-            {activeSlide.title}
-          </h1>
-          <p className="mt-6 max-w-3xl text-base leading-8 text-[#475569] sm:text-lg">
-            Building skills for the future of drone technology through practical learning,
-            technical development, and industry-oriented training.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            {programLabels.map((label) => (
-              <span
-                key={label}
-                className="rounded-full border border-[#123A56]/15 bg-white px-4 py-2 text-sm text-[#193C54]"
-              >
-                {label}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-10 flex items-center gap-3">
-            <button
-              type="button"
-              onClick={prevSlide}
-              aria-label="Previous slide"
-              className="rounded-full border border-[#123A56]/15 bg-white p-3 text-[#123A56] transition hover:bg-[#f4f8fb]"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              onClick={nextSlide}
-              aria-label="Next slide"
-              className="rounded-full border border-[#123A56]/15 bg-white p-3 text-[#123A56] transition hover:bg-[#f4f8fb]"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      </section> */}
-
       <section className="px-4 py-16 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
@@ -212,8 +163,8 @@ export default function InvestorPage() {
             </div>
             <div className="group relative min-h-[200px] overflow-hidden rounded-[1rem] sm:min-h-[360px] lg:min-h-[400px]">
               <Image
-                src={activeSlide.image}
-                alt={activeSlide.title}
+                src='/assets/Education/section1.png'
+                alt=''
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -223,21 +174,7 @@ export default function InvestorPage() {
           </div>
         </div>
       </section>
-      {/* <section className="px-4 py-16 sm:px-8">
-        <div className="rounded-[1.75rem] bg-[#f4f8fb] p-7 shadow-sm sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#6B7280]">
-            Practical Learning & Technical Exposure
-          </p>
-          <div className="mt-6 space-y-4">
-            {trainingHighlights.map((point) => (
-              <div key={point} className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#123A56]" />
-                <p className="text-base font-medium leading-7 text-[#193C54]">{point}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+
 
       <section className="bg-[#f8fbfd] px-4 py-16 sm:px-8">
         <div className="mx-auto max-w-7xl">
@@ -296,8 +233,8 @@ export default function InvestorPage() {
             </div>
             <div className="group relative min-h-[200px] overflow-hidden rounded-[1rem] sm:min-h-[360px] lg:min-h-[400px]">
               <Image
-                src={activeSlide.image}
-                alt={activeSlide.title}
+                src='/assets/Education/section2.png'
+                alt=''
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -365,8 +302,8 @@ export default function InvestorPage() {
             </div>
             <div className="group relative min-h-[200px] overflow-hidden rounded-[1rem] sm:min-h-[360px] lg:min-h-[400px]">
               <Image
-                src={activeSlide.image}
-                alt={activeSlide.title}
+                src='/assets/Education/section3.png'
+                alt=''
                 fill
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes="(min-width: 1024px) 40vw, 100vw"

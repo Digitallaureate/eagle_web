@@ -137,9 +137,9 @@ export default function ContactUsPage() {
 
   return (
     <main className="bg-white text-[#193C54]">
-      <section className="relative min-h-[500px] overflow-hidden">
+      <section className="relative h-[420px] w-full overflow-hidden md:h-[820px]">
         <Image
-          src="/assets/slider/global_freight.jpg"
+          src="/assets/contact_us.png"
           alt="Contact us hero"
           fill
           priority

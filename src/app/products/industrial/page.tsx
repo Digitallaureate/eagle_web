@@ -4,7 +4,7 @@ export default function AvplEducationPage() {
   return (
     <ProductDetailPage
       eyebrow="Product"
-      title="AVPL Education"
+      title="Education"
       description="EAGLE AI AEROSPACE (OPC) is working toward building a dedicated drone education and training center focused on developing practical skills and technical knowledge in drone technology and pilot training. Our vision is to help students understand drone systems, operations, safety practices, and emerging career opportunities in the growing UAV ecosystem."
       image="/assets/slider/Air_Freight_Slider.png"
       imageAlt="Drone education and training"
