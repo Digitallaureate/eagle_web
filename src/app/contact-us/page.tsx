@@ -229,7 +229,7 @@ export default function ContactUsPage() {
 
               <h2 className="mt-3 text-3xl font-bold text-[#193C54]">Let&apos;s Connect</h2>
               <p className="mt-4 text-base leading-8 text-[#434242]">
-                EAGLE AI AEROSPACE (OPC) welcomes inquiries related to drone technology, future collaborations, industrial applications, education initiatives, manufacturing development, and upcoming UAV projects.
+                EAGLE AI AEROSPACE welcomes inquiries related to drone technology, future collaborations, industrial applications, education initiatives, manufacturing development, and upcoming UAV projects.
               </p>
               <p className="mt-3 text-base leading-8 text-[#434242]">
                 Whether you are an industry professional, institution, investor, student, or technology enthusiast, we look forward to connecting and exploring future opportunities together.

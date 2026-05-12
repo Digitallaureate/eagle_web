@@ -17,10 +17,10 @@ export const headerContent = {
       href: "/products",
       hasChevron: true,
       children: [
-        { label: "Commercial & Consumer Drones", href: "/products/commercial-consumer-drones" },
-        { label: "Agriculture", href: "/products/agriculture" },
-        { label: "Industrial", href: "/products/industrial" },
-        { label: "Defence/ Tactical UAV Solutions", href: "/products/defence-tactical-uav-solutions" },
+        { label: "Consumer UAVs", href: "/products/commercial-consumer-drones" },
+        { label: "Agri Drone Tech", href: "/products/agriculture" },
+        { label: "Industrial UAVs", href: "/products/industrial" },
+        { label: "Tactical UAVs", href: "/products/defence-tactical-uav-solutions" },
       ],
     },
     {

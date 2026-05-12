@@ -191,7 +191,7 @@ export default function ProductionUnitPage() {
               <div className="mt-5 h-1 w-20 rounded-full bg-[#123A56]/15" />
               <div className="mt-6 space-y-5 text-base leading-8 text-[#334155] sm:text-lg">
                 <p>
-                  EAGLE AI AEROSPACE (OPC) aims to build a future-ready production and
+                  EAGLE AI AEROSPACE aims to build a future-ready production and
                   development ecosystem dedicated to next-generation drone technologies and
                   unmanned aerial systems. Focused on engineering excellence, innovation, and
                   scalable manufacturing, our planned facility is envisioned to support the
@@ -211,7 +211,7 @@ export default function ProductionUnitPage() {
                   technical learning, and collaborative innovation by bringing together
                   engineering, manufacturing, and operational expertise under one ecosystem.
                   With a long-term commitment to innovation, operational quality, and
-                  indigenous capability development, EAGLE AI AEROSPACE (OPC) seeks to play
+                  indigenous capability development, EAGLE AI AEROSPACE seeks to play
                   a role in strengthening India’s position in the rapidly evolving global UAV
                   ecosystem.
                 </p>

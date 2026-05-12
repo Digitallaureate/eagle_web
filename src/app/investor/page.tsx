@@ -148,7 +148,7 @@ export default function InvestorPage() {
               </h2>
               <div className="mt-6 space-y-5 text-base leading-8 text-[#334155] sm:text-lg">
                 <p>
-                  EAGLE AI AEROSPACE (OPC) is working toward establishing a modern drone education and training center focused on practical learning, technical development, and industry-oriented skill enhancement.
+                  EAGLE AI AEROSPACE is working toward establishing a modern drone education and training center focused on practical learning, technical development, and industry-oriented skill enhancement.
                   Our vision is to create an ecosystem where students, aspiring drone pilots, and technology enthusiasts can gain hands-on exposure to emerging UAV technologies and real-world drone applications.
                 </p>
                 <p>
@@ -292,7 +292,7 @@ export default function InvestorPage() {
               </h2>
               <div className="mt-6 space-y-5 text-base leading-8 text-[#334155] sm:text-lg">
                 <p>
-                  EAGLE AI AEROSPACE (OPC) also envisions the development of an internal ITI-style technical learning environment designed to provide students with practical exposure alongside theoretical understanding.
+                  EAGLE AI AEROSPACE also envisions the development of an internal ITI-style technical learning environment designed to provide students with practical exposure alongside theoretical understanding.
                   As drone testing and operational evaluation form an important part of the overall development and production process, students may also get opportunities to observe and participate in supervised practical activities related to testing, operations, and technical workflows.
                 </p>
                 <p>

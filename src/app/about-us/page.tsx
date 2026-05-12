@@ -39,7 +39,7 @@ export default function AboutUsPage() {
           >
             <Image
               src={slide.image}
-              alt="About Eagle AI Aerospace (OPC)"
+              alt="About Eagle AI Aerospace"
               fill
               priority={index === 0}
               className={`object-cover ${slide.position || "object-[center_25%]"}`}
@@ -62,12 +62,12 @@ export default function AboutUsPage() {
           <div className="rounded-[2rem] bg-[#f8fbfd] p-8 shadow-sm sm:p-12">
 
             <h2 className="mt-4 text-3xl font-semibold text-[#123A56] sm:text-4xl">
-              EAGLE AI AEROSPACE (OPC)
+              EAGLE AI AEROSPACE
             </h2>
 
             <div className="mt-6 space-y-5 text-base leading-8 text-[#334155] sm:text-lg">
               <p>
-                At Eagle AI Aerospace (OPC), we are building the future of intelligent aviation.
+                At Eagle AI Aerospace, we are building the future of intelligent aviation.
               </p>
               <p>
                 Founded with a vision to revolutionize aerial operations, we harness the power of artificial intelligence and advanced drone technologies to create smarter, faster, and more efficient solutions for modern industries.

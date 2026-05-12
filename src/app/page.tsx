@@ -63,12 +63,12 @@ const aboutGallery = {
 const productShowcase = [
   {
     id: "comercialDrones",
-    label: "Commercial & Consumer Drones",
-    title: "Commercial & Consumer Drones",
+    label: "Consumer UAVs",
+    title: "Consumer UAVs",
     href: "/products/commercial-consumer-drones",
     image: "/assets/Home/commercial_section.png",
     description:
-      "EAGLE AI AEROSPACE (OPC) is working toward developing drone solutions for businesses, professionals, creators, and everyday users. From aerial photography and surveying to recreational and commercial applications, our goal is to deliver reliable, easy-to-use, and future-ready drone technology for a wide range of users.",
+      "EAGLE AI AEROSPACE is working toward developing drone solutions for businesses, professionals, creators, and everyday users. From aerial photography and surveying to recreational and commercial applications, our goal is to deliver reliable, easy-to-use, and future-ready drone technology for a wide range of users.",
     points: [
       { icon: Clock3, text: "40–60% time saving in farm management" },
       { icon: HandCoins, text: "30–50% reduction in labour and resource costs" },
@@ -78,12 +78,12 @@ const productShowcase = [
   },
   {
     id: "agri",
-    label: "Agriculture",
-    title: "Agriculture",
+    label: "Agri Drone Tech",
+    title: "Agri Drone Tech",
     href: "/products/agriculture",
     image: "/assets/Home/agriculture_section.png",
     description:
-      "EAGLE AI AEROSPACE (OPC) is focused on developing drone solutions for modern agriculture, including crop spraying, aerial monitoring, and field mapping applications. Our vision is to make advanced agri-technology more accessible, helping farmers improve productivity, optimize resources, and adopt efficient farming practices across Bharat.",
+      "EAGLE AI AEROSPACE is focused on developing drone solutions for modern agriculture, including crop spraying, aerial monitoring, and field mapping applications. Our vision is to make advanced agri-technology more accessible, helping farmers improve productivity, optimize resources, and adopt efficient farming practices across Bharat.",
     points: [
       { icon: Plane, text: "On-demand access to commercial drone operations" },
       { icon: Users, text: "Certified pilots and support teams for field delivery" },
@@ -93,12 +93,12 @@ const productShowcase = [
   },
   {
     id: "industrial",
-    label: "Industrial",
-    title: "Industrial",
+    label: "Industrial UAVs",
+    title: "Industrial UAVs",
     href: "/products/industrial",
     image: "/assets/Home/industrial_section.png",
     description:
-      "EAGLE AI AEROSPACE (OPC) is focused on developing industrial drone solutions for engineering, infrastructure, construction, and utility operations. Our planned systems are intended to support site inspections, drainage monitoring, surveying, and infrastructure assessment while improving efficiency, safety, and operational visibility.",
+      "EAGLE AI AEROSPACE is focused on developing industrial drone solutions for engineering, infrastructure, construction, and utility operations. Our planned systems are intended to support site inspections, drainage monitoring, surveying, and infrastructure assessment while improving efficiency, safety, and operational visibility.",
     points: [
       { icon: GraduationCap, text: "Structured learning for drone careers and certifications" },
       { icon: BookOpen, text: "Practical modules with simulation and field exposure" },
@@ -108,12 +108,12 @@ const productShowcase = [
   },
   {
     id: "defence",
-    label: "Defence/ Tactical UAV Solutions",
-    title: "Defence/ Tactical UAV Solutions",
+    label: "Tactical UAVs",
+    title: "Tactical UAVs",
     href: "/products/defence-tactical-uav-solutions",
     image: "/assets/Home/defence_tactical_section.png",
     description:
-      "EAGLE AI AEROSPACE (OPC) is working toward the development of next-generation tactical UAV systems for defense and security applications. Our vision includes aerial platforms for border monitoring, reconnaissance, tactical surveillance, and mission-support operations, with a focus on innovation, reliability, and operational adaptability.",
+      "EAGLE AI AEROSPACE is working toward the development of next-generation tactical UAV systems for defense and security applications. Our vision includes aerial platforms for border monitoring, reconnaissance, tactical surveillance, and mission-support operations, with a focus on innovation, reliability, and operational adaptability.",
     points: [
       { icon: Cpu, text: "Indigenous drone platforms built for real-world missions" },
       { icon: Wrench, text: "Reliable design with maintainable hardware systems" },
@@ -231,11 +231,11 @@ export default function Home() {
               About Us
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-[#434242] sm:text-base lg:text-justify">
-              At Eagle AI Aerospace (OPC), we are building the future of intelligent aviation.
+              At Eagle AI Aerospace, we are building the future of intelligent aviation.
               Founded with a vision to revolutionize aerial operations, we harness the power of artificial intelligence and advanced drone technologies to create smarter, faster, and more efficient solutions for modern industries. Our offerings span across surveillance, mapping, inspection, and autonomous operations—empowering businesses with real-time insights and operational excellence.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-[#434242] sm:text-base lg:text-justify">
-              We believe that the sky is not the limit—it is the starting point. With a strong commitment to innovation, safety, and reliability, Eagle AI Aerospace (OPC) is positioned to become a trusted partner in the evolving aerospace and AI-driven ecosystem.
+              We believe that the sky is not the limit—it is the starting point. With a strong commitment to innovation, safety, and reliability, Eagle AI Aerospace is positioned to become a trusted partner in the evolving aerospace and AI-driven ecosystem.
               Our approach is rooted in combining cutting-edge technology with practical industry applications. Whether it is infrastructure monitoring, industrial inspections, security surveillance, or future-ready logistics solutions, we aim to deliver value-driven outcomes that enhance productivity and reduce operational risks.
             </p>
             <Link
@@ -342,7 +342,7 @@ export default function Home() {
               Production Unit
             </h2>
             <p className="mt-6 text-xl leading-relaxed text-[#434242]">
-              EAGLE AI AEROSPACE (OPC) aims to build a future-ready production and assembly ecosystem for next-generation drone solutions. Our planned facility is envisioned to support product development, system integration, testing, and scalable manufacturing capabilities for diverse aerial technology applications.
+              EAGLE AI AEROSPACE aims to build a future-ready production and assembly ecosystem for next-generation drone solutions. Our planned facility is envisioned to support product development, system integration, testing, and scalable manufacturing capabilities for diverse aerial technology applications.
             </p>
           </div>
 
@@ -387,10 +387,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-5xl text-center">
             <h2 className="text-4xl font-bold text-[#193C54] sm:text-5xl">
-              Education and Traning
+              Education and Training
             </h2>
             <p className="mt-6 text-xl leading-relaxed text-[#434242]">
-              EAGLE AI AEROSPACE (OPC) is working toward building a dedicated drone education and training center focused on developing practical skills and technical knowledge in drone technology and pilot training. Inspired by industry-oriented learning models,
+              EAGLE AI AEROSPACE is working toward building a dedicated drone education and training center focused on developing practical skills and technical knowledge in drone technology and pilot training. Inspired by industry-oriented learning models,
               our vision is to help students understand drone systems, operations, safety practices, and emerging career opportunities in the growing UAV ecosystem.
             </p>
           </div>
